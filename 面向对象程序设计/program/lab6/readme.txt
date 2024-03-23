@@ -1,0 +1,3 @@
+1. The generated main.exe file in the output folder can be directly run to view the test result, or you can compile and run main.cpp to test by yourself.
+
+2. The vector class is defined in my_vector.h and tested in main.cpp, including all the member functions and the object construction of vector template objects: int float double char and string. Testers can also modify the main.cpp code for more tests.

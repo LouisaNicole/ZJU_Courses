@@ -1,0 +1,17 @@
+Ëæ»ú²âÊÔ½á¹û£º
+test1£º
+go right
+go back
+go front
+go left
+---------------------------------
+test2:
+go front
+go down
+---------------------------------
+test3:
+go down
+go back
+go left
+---------------------------------
+

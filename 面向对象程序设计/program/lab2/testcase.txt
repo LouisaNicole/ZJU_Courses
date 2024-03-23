@@ -1,0 +1,37 @@
+Windows system requires pressing Ctrl+Z followed by Enter on a new line to indicate the end of input in the terminal.
+
+Testing code:
+
+TESE1:
+K.Weng Math 5 DS 5 OOP 5
+T.Dixon DS 4 OOP 3
+C.Chu ADS 3 OS 4 DB 4 OOP 4
+L.Tson DB 4 OS 3
+L.Lee OS 3 DB 4 ADS 3
+result1:
+no      name    Math    DS      OOP     ADS     OS      DB      average
+1       K.Weng  5       5       5                               5
+2       T.Dixon         4       3                               3.5
+3       C.Chu                   4       3       4       4       3.75
+4       L.Tson                                  3       4       3.5
+5       L.Lee                           3       3       4       3.33333
+        average 5       4.5     4       3       3.33333 4
+        min     5       4       3       3       3       4
+        max     5       5       5       3       4       4
+
+
+TEST2:
+A CHINESE 5 MATH 4 ENGLISH 4
+B MATH 3 ENGLISH 4 PHYSIC 3
+C PHYSIC 2 CHINESE 3
+D CHEMI 5 MATH 3 ENGLISH 4
+result2:
+no      name    CHINESE MATH    ENGLISH PHYSIC  CHEMI   average
+1       A       5       4       4                       4.33333
+2       B               3       4       3               3.33333
+3       C       3                       2               2.5
+4       D               3       4               5       4
+        average 4       3.33333 4       2.5     5
+        min     3       3       4       2       5
+        max     5       4       4       3       5
+
