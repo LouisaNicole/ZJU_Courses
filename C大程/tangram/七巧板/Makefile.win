@@ -1,0 +1,70 @@
+# Project: Tangrum
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = libgraphics/exceptio.o libgraphics/genlib.o libgraphics/graphics.o libgraphics/random.o libgraphics/simpio.o libgraphics/strlib.o main.o libgraphics/imgui.o libgraphics/ColorChoose.o libgraphics/DrawPicture.o libgraphics/DisplayPage.o libgraphics/tangrammove.o libgraphics/Judge.o libgraphics/absorb.o libgraphics/Hint.o
+LINKOBJ  = libgraphics/exceptio.o libgraphics/genlib.o libgraphics/graphics.o libgraphics/random.o libgraphics/simpio.o libgraphics/strlib.o main.o libgraphics/imgui.o libgraphics/ColorChoose.o libgraphics/DrawPicture.o libgraphics/DisplayPage.o libgraphics/tangrammove.o libgraphics/Judge.o libgraphics/absorb.o libgraphics/Hint.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -mwindows -g3
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"./include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++" -I"./include"
+BIN      = Tangram.exe
+CXXFLAGS = $(CXXINCS) -g3 -std=c99
+CFLAGS   = $(INCS) -g3 -std=c99
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+libgraphics/exceptio.o: libgraphics/exceptio.c
+	$(CC) -c libgraphics/exceptio.c -o libgraphics/exceptio.o $(CFLAGS)
+
+libgraphics/genlib.o: libgraphics/genlib.c
+	$(CC) -c libgraphics/genlib.c -o libgraphics/genlib.o $(CFLAGS)
+
+libgraphics/graphics.o: libgraphics/graphics.c
+	$(CC) -c libgraphics/graphics.c -o libgraphics/graphics.o $(CFLAGS)
+
+libgraphics/random.o: libgraphics/random.c
+	$(CC) -c libgraphics/random.c -o libgraphics/random.o $(CFLAGS)
+
+libgraphics/simpio.o: libgraphics/simpio.c
+	$(CC) -c libgraphics/simpio.c -o libgraphics/simpio.o $(CFLAGS)
+
+libgraphics/strlib.o: libgraphics/strlib.c
+	$(CC) -c libgraphics/strlib.c -o libgraphics/strlib.o $(CFLAGS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+libgraphics/imgui.o: libgraphics/imgui.c
+	$(CC) -c libgraphics/imgui.c -o libgraphics/imgui.o $(CFLAGS)
+
+libgraphics/ColorChoose.o: libgraphics/ColorChoose.c
+	$(CC) -c libgraphics/ColorChoose.c -o libgraphics/ColorChoose.o $(CFLAGS)
+
+libgraphics/DrawPicture.o: libgraphics/DrawPicture.c
+	$(CC) -c libgraphics/DrawPicture.c -o libgraphics/DrawPicture.o $(CFLAGS)
+
+libgraphics/DisplayPage.o: libgraphics/DisplayPage.c
+	$(CC) -c libgraphics/DisplayPage.c -o libgraphics/DisplayPage.o $(CFLAGS)
+
+libgraphics/tangrammove.o: libgraphics/tangrammove.c
+	$(CC) -c libgraphics/tangrammove.c -o libgraphics/tangrammove.o $(CFLAGS)
+
+libgraphics/Judge.o: libgraphics/Judge.c
+	$(CC) -c libgraphics/Judge.c -o libgraphics/Judge.o $(CFLAGS)
+
+libgraphics/absorb.o: libgraphics/absorb.c
+	$(CC) -c libgraphics/absorb.c -o libgraphics/absorb.o $(CFLAGS)
+
+libgraphics/Hint.o: libgraphics/Hint.c
+	$(CC) -c libgraphics/Hint.c -o libgraphics/Hint.o $(CFLAGS)
